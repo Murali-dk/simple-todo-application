@@ -1,1 +1,54 @@
 /* Write your CSS here */
+.todos-item {
+  display: flex;
+  justify-content: space-between;
+}
+.delete-btn {
+  border: 1px solid red;
+  background-color: transparent;
+  color: red;
+  border-radius: 4px;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+}
+.edit-btn {
+  border: 1px solid blue;
+  background-color: transparent;
+  color: blue;
+  border-radius: 4px;
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  margin-right: 11px;
+}
+.todo-content {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .delete-btn {
+    width: 80px;
+  }
+  .todo-content {
+    width: 200px;
+  }
+  .edit-btn {
+    width: 80px;
+    margin-bottom: 11px;
+  }
+}
+.edit-todo {
+  border: 1px solid black;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Roboto';
+  width: 40%;
+  margin-top: 20px;
+  height: 30px;
+}
+.checked-todo {
+  text-decoration: line-through;
+}
+.content-and-checkbox-cont {
+  display: flex;
+}

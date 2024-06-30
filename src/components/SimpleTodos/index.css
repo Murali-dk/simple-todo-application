@@ -1,8 +1,9 @@
 .bg-cont {
   background-color: #ffc2a0;
-  height: 100vh;
+  min-height: 100vh;
   padding: 75px;
   font-family: 'Roboto';
+  width: 100%;
 }
 .card-cont {
   background-color: #ffffff;
@@ -16,4 +17,48 @@
   font-weight: 600;
   text-align: center;
   color: orange;
+}
+.todos-list {
+  list-style: none;
+}
+.input-container {
+  text-align: center;
+}
+.input {
+  width: 350px;
+  height: 35px;
+  border: lightgray solid 1px;
+  border-radius: 5px;
+  margin-right: 12px;
+  outline: none;
+  margin-bottom: 12px;
+  color: grey;
+  padding-left: 10px;
+  font-size: 17px;
+}
+.add-btn {
+  background-color: blue;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  height: 28px;
+  width: 80px;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .bg-cont {
+    padding: 20px;
+    width: 80vh;
+  }
+  .card-cont {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .head {
+    font-size: 30px;
+  }
+  .input {
+    width: 250px;
+  }
 }
