@@ -20,9 +20,9 @@ const TodoItem = props => {
     deleteItem(id)
   }
 
-  const editTodos = async () => {
-    await todoEdited(id)
-    await setEditing(true)
+  const editTodos = () => {
+    todoEdited(id)
+    setEditing(true)
   }
 
   const changingTodo = event => {
@@ -34,8 +34,8 @@ const TodoItem = props => {
     savedTodo(id, editTodoTitle)
   }
 
-  const userAction = () => {
-    setChecked(preveState => !preveState)
+  const userAction = event => {
+    setChecked(event.target.checked)
   }
 
   const style = checked === false ? null : 'checked-todo'
@@ -51,7 +51,7 @@ const TodoItem = props => {
         />
       ) : (
         <div className="content-and-checkbox-cont">
-          <input onClick={userAction} id={id} type="checkbox" />
+          <input onChange={userAction} id={id} type="checkbox" />
           <p id={id} className={`todo-content ${style}`}>
             {title}
           </p>
